@@ -1,38 +1,37 @@
 package com.gmail.pdv.compapp.toshiba;
 
-public class ToshibaModel1 extends Toshiba {
+import com.gmail.pdv.compapp.objects.AbstractNotebook;
+
+public class ToshibaModel1 extends AbstractNotebook implements Toshiba {
 
     public ToshibaModel1(String name) {
         super(name);
     }
 
-    public ToshibaModel1(String name, int ram, int hdd, double weight) {
-        super(name, ram, hdd, weight);
+    public ToshibaModel1(int ram, int hdd, boolean cdWritable, String name, double weight) {
+        super(ram, hdd, cdWritable, name, weight);
     }
 
-    public void initializeBeforeConnect() {
-        System.out.println("Toshiba Model1 " + getName() + " initialized for connection");
-    }
-
+    
     @Override
     public void connect() {
-        System.out.println("Toshiba Model1 connect");
+        System.out.println("ToshibaModel1 connect");
     }
 
     @Override
     public void lightKeyboard() {
         System.out.println("Keyboard without light");
     }
-
+    
     @Override
     public void workFromBattery() {
         System.out.println("ToshibaModel1 slow working from battery");
     }
- 
-    
-   
-   
-    
+
+    @Override
+    public void useTouchPad() {
+        System.out.println("ToshibaModel1 using touchpad");
+    }
     
     
 }

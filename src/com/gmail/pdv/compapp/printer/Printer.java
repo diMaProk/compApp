@@ -1,8 +1,8 @@
 package com.gmail.pdv.compapp.printer;
 
-import com.gmail.pdv.compapp.objects.ElectronicDevice;
+import com.gmail.pdv.compapp.objects.AbstractElectronicDevice;
 
-public class Printer extends ElectronicDevice{
+public class Printer extends AbstractElectronicDevice{
     
     private boolean colorPrint = false; //by default printer is in black-white mode
     

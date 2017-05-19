@@ -1,8 +1,8 @@
 package com.gmail.pdv.compapp.objects;
 
-import com.gmail.pdv.compapp.toshiba.ToshibaModel1;
+import com.gmail.pdv.compapp.toshiba.ToshibaModel2;
 
-public class Monitor extends ElectronicDevice{
+public class Monitor extends AbstractElectronicDevice{
     
     public Monitor(){
         this ("Default monitor");
@@ -17,8 +17,8 @@ public class Monitor extends ElectronicDevice{
     }
     
     public void connectDevice (Computer comp){
-        if (comp instanceof ToshibaModel1){
-            ((ToshibaModel1)comp).initializeBeforeConnect();
+        if (comp instanceof ToshibaModel2){
+            ((ToshibaModel2)comp).initializeBeforeConnect();
         }
         comp.connect();
     }
